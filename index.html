@@ -62,51 +62,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-php cpu 100% 解决方案" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/08/15/php cpu 100% 解决方案/" class="article-date">
-  <time datetime="2018-08-15T06:39:18.000Z" itemprop="datePublished">2018-08-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/15/php cpu 100% 解决方案/">php cpu 100%解决方案</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>业务机器cpu突然100%</p>
-<p>问题重现<br>1、vim /tmp/1.php<br>   &lt;?php</p>
-<p>   while(1)<br>   {}</p>
-<p>2、PHP 进程cpu100% pid 3218</p>
-<p>3、gdb -p 3218<br>   source /tmp/php-7.1.7/.gdbinit || source /usr/local/src/php7/.gdbinit<br>   zbacktrace</p>
-<p>   结果：<br>   [0x7f27c3613030] (main) /tmp/1.php:3</p>
-<p> 总结：<br> strace其实也是对程序员基础的考验，如果不懂操作操作系统，完全不懂底层，肯定也达不到会用strace的程度。<br> 当然strace对于PHP代码里的死循环是解决不了的。比如你发现一个php-fpm进程CPU100%了，<br> strace恐怕是解决不了的。因为strace是看系统调用，一般都是IO类操作，既然是IO密集，那CPU一定不可能是100%。</p>
-<p>(gdb) source /tmp/php-7.1.7/.gdbinit<br>(gdb) zbacktrace<br>[0x7f165ce157e0] abmemcached-&gt;get_numbers() /mnt/www/cms/application/controllers/daemon/Abmemcached.php:17<br>[0x7f165ce14730] (main) /mnt/www/cms/system/core/CodeIgniter.php:559<br>[0x7f165ce14030] (main) /mnt/www/cms/index.php:319<br>(gdb)</p>
-<p>在php中我们最常使用调试方式是输出打印方式，比如通过 echo、var_dump 输出信息到终端或者通过 fwrite、file_put_contents 将信息写入到文件中。这种普通方式能帮我们解决绝大部分调试问题。但仍然有些问题是需要借助其他工具来分析的，<br>比如死循环，程序执行时间超预期，占用cpu过高，php内核或者扩展错误等场景，这时如果借助 strace、gdb、tcpdump 这样的工具就能很好的去帮助我们定位问题。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://programemark.github.io/2018/08/15/php cpu 100% 解决方案/" data-id="cjkut1yrk0000scr6odcgfyfq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-php-cpu-100-解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/15/php-cpu-100-解决方案/" class="article-date">
@@ -134,7 +89,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://programemark.github.io/2018/08/15/php-cpu-100-解决方案/" data-id="cjkut1yrw0002scr6wt1yv5gn" class="article-share-link">Share</a>
+      <a data-url="https://programemark.github.io/2018/08/15/php-cpu-100-解决方案/" data-id="cjkut7vuc0001thr650n15hme" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://programemark.github.io/2018/08/15/hello-world/" data-id="cjkut1yrq0001scr69on2dsex" class="article-share-link">Share</a>
+      <a data-url="https://programemark.github.io/2018/08/15/hello-world/" data-id="cjkut7vu60000thr6bqn5d296" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,10 +173,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2018/08/15/php cpu 100% 解决方案/">php cpu 100%解决方案</a>
-          </li>
         
           <li>
             <a href="/2018/08/15/php-cpu-100-解决方案/">php cpu 100%解决方案</a>
