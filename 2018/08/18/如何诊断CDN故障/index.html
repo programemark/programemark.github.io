@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="Quick Start故障描述12项目中使用CDN做文件下载服务，最近不时有网友反馈下载出错由于是第三方提供的服务，且节点众多，所以诊断起来有点麻烦。 解决方案一 17CE在17CE这个网站输入要查询的URL 1可以快速看到全国节点访问情况，所以有问题的节点一目了然【主要是访问超时和访问不可达】 一 awk ip12345678通过阿里测提供的服务，我们能拿到IP列表，当然这个列表不可能百分百完整">
+<meta name="description" content="Quick Start故障描述12项目中使用CDN做文件下载服务，最近不时有网友反馈下载出错由于是第三方提供的服务，且节点众多，所以诊断起来有点麻烦。 解决方案一 17CE在17CE这个网站输入要查询的URL 1可以快速看到全国节点访问情况，所有有问题的节点一目了然【主要是访问超时和访问不可达】 一 awk ip12345678通过阿里测提供的服务，我们能拿到IP列表，当然这个列表不可能百分百完整">
 <meta name="keywords" content="技术分享、记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何诊断CDN故障">
 <meta property="og:url" content="https://programemark.github.io/2018/08/18/如何诊断CDN故障/index.html">
 <meta property="og:site_name" content="programemark blog">
-<meta property="og:description" content="Quick Start故障描述12项目中使用CDN做文件下载服务，最近不时有网友反馈下载出错由于是第三方提供的服务，且节点众多，所以诊断起来有点麻烦。 解决方案一 17CE在17CE这个网站输入要查询的URL 1可以快速看到全国节点访问情况，所以有问题的节点一目了然【主要是访问超时和访问不可达】 一 awk ip12345678通过阿里测提供的服务，我们能拿到IP列表，当然这个列表不可能百分百完整">
+<meta property="og:description" content="Quick Start故障描述12项目中使用CDN做文件下载服务，最近不时有网友反馈下载出错由于是第三方提供的服务，且节点众多，所以诊断起来有点麻烦。 解决方案一 17CE在17CE这个网站输入要查询的URL 1可以快速看到全国节点访问情况，所有有问题的节点一目了然【主要是访问超时和访问不可达】 一 awk ip12345678通过阿里测提供的服务，我们能拿到IP列表，当然这个列表不可能百分百完整">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://programemark.github.io/2018/08/18/如何诊断CDN故障/1.jpg">
 <meta property="og:image" content="https://programemark.github.io/2018/08/18/如何诊断CDN故障/2.jpg">
-<meta property="og:updated_time" content="2018-08-18T14:21:13.121Z">
+<meta property="og:updated_time" content="2018-08-18T14:36:35.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何诊断CDN故障">
-<meta name="twitter:description" content="Quick Start故障描述12项目中使用CDN做文件下载服务，最近不时有网友反馈下载出错由于是第三方提供的服务，且节点众多，所以诊断起来有点麻烦。 解决方案一 17CE在17CE这个网站输入要查询的URL 1可以快速看到全国节点访问情况，所以有问题的节点一目了然【主要是访问超时和访问不可达】 一 awk ip12345678通过阿里测提供的服务，我们能拿到IP列表，当然这个列表不可能百分百完整">
+<meta name="twitter:description" content="Quick Start故障描述12项目中使用CDN做文件下载服务，最近不时有网友反馈下载出错由于是第三方提供的服务，且节点众多，所以诊断起来有点麻烦。 解决方案一 17CE在17CE这个网站输入要查询的URL 1可以快速看到全国节点访问情况，所有有问题的节点一目了然【主要是访问超时和访问不可达】 一 awk ip12345678通过阿里测提供的服务，我们能拿到IP列表，当然这个列表不可能百分百完整">
 <meta name="twitter:image" content="https://programemark.github.io/2018/08/18/如何诊断CDN故障/1.jpg">
 
 
@@ -335,7 +335,7 @@
       
         <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="故障描述"><a href="#故障描述" class="headerlink" title="故障描述"></a>故障描述</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">项目中使用CDN做文件下载服务，最近不时有网友反馈下载出错</span><br><span class="line">由于是第三方提供的服务，且节点众多，所以诊断起来有点麻烦。</span><br></pre></td></tr></table></figure>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="一-17CE"><a href="#一-17CE" class="headerlink" title="一 17CE"></a>一 17CE</h4><p>在<a href="http://www.17ce.com/" target="_blank" rel="noopener">17CE</a>这个网站输入要查询的URL<br><img src="/2018/08/18/如何诊断CDN故障/1.jpg" alt="1"><br><img src="/2018/08/18/如何诊断CDN故障/2.jpg" alt="2"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可以快速看到全国节点访问情况，所以有问题的节点一目了然【主要是访问超时和访问不可达】</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可以快速看到全国节点访问情况，所有有问题的节点一目了然【主要是访问超时和访问不可达】</span><br></pre></td></tr></table></figure>
 <h4 id="一-awk-ip"><a href="#一-awk-ip" class="headerlink" title="一 awk ip"></a>一 awk ip</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">通过阿里测提供的服务，我们能拿到IP列表，当然这个列表不可能百分百完整</span><br><span class="line">有了工具网站，再搭配AWK之类的神器，很容易就能整理出IP列表，</span><br><span class="line">把它保存成一个名为ip.txt的文件，每行一个IP，稍后使用。接下来我们只要在所有的节点上下载同一个文件，</span><br><span class="line">shell&gt; cat ip.txt | xargs -n 1 -P 0 -I &#123;&#125; \</span><br><span class="line">    wget -q -e http_proxy=&#123;&#125; -O &#123;&#125; <span class="string">"http://url/to/file"</span> &amp;</span><br><span class="line"></span><br><span class="line">最后看看文件散列是否一致就大功告成了：</span><br><span class="line">shell&gt; md5sum *</span><br></pre></td></tr></table></figure>
       
     </div>
